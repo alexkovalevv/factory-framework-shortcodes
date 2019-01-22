@@ -253,9 +253,9 @@
 			 * @since 1.0.0
 			 * @return string
 			 */
-			public function render($attr, $content)
+			public function render($attr, $content, $tag)
 			{
-				
+
 				if( !$this->connected ) {
 					$this->assets(array($attr), true, false);
 					$this->scripts->connect(true);
@@ -284,10 +284,10 @@
 				}
 				
 				ob_start();
-				$this->html($attr, $content);
+				$this->html($attr, $content, $tag);
 				$html = ob_get_clean();
 				
-				return $html;
+				return nl2br($html);
 			}
 			
 			/**
@@ -316,6 +316,6 @@
 			 * @since 1.0.0
 			 * @return void
 			 */
-			public abstract function html($attr, $content);
+			public abstract function html($attr, $content, $tag);
 		}
 	}
