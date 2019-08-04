@@ -13,7 +13,7 @@ if ( defined( 'FACTORY_SHORTCODES_000_LOADED' ) ) {
 	return;
 }
 
-define( 'FACTORY_SHORTCODES_000_VERSION', '3.2.7' );
+define( 'FACTORY_SHORTCODES_000_VERSION', '3.2.9' );
 
 define( 'FACTORY_SHORTCODES_000_LOADED', true );
 
